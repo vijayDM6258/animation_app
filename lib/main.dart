@@ -1,4 +1,5 @@
 import 'package:animation_app/detail_page.dart';
+import 'package:animation_app/drag_anim.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -68,6 +69,17 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
+        actions: [
+          IconButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return DragAnim();
+                  },
+                ));
+              },
+              icon: Icon(Icons.drag_handle))
+        ],
       ),
       body: Center(
         child: Column(

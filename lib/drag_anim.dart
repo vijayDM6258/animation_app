@@ -71,7 +71,7 @@ class _DragAnimState extends State<DragAnim> {
                     List<Object?> candidateData,
                     List<dynamic> rejectedData,
                   ) {
-                    return Container(
+                    return AnimatedContainer(
                       height: (isDragging == "red") ? 100 : 80,
                       width: (isDragging == "red") ? 100 : 80,
                       decoration: BoxDecoration(
@@ -79,6 +79,7 @@ class _DragAnimState extends State<DragAnim> {
                         border: Border.all(color: Colors.red, width: (isDragging == "red") ? 8 : 2),
                         borderRadius: BorderRadius.circular(10),
                       ),
+                      duration: Duration(milliseconds: 300),
                     );
                   },
                   onAcceptWithDetails: (details) {

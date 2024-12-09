@@ -1,3 +1,4 @@
+import 'package:animation_app/animator_1_page.dart';
 import 'package:animation_app/detail_page.dart';
 import 'package:animation_app/drag_anim.dart';
 import 'package:flutter/material.dart';
@@ -85,6 +86,15 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context) {
+                      return Animator1Page();
+                    },
+                  ));
+                },
+                child: Text("Anim1")),
             const Text(
               'You have pushed the button this many times:',
             ),

@@ -30,7 +30,7 @@ class _Animator2PageState extends State<Animator2Page> with TickerProviderStateM
     colorAnimate = ColorTween(begin: Colors.red, end: Colors.blue).animate(_controller);
     rotateAnimate = Tween(begin: 0.0, end: 4.0).animate(_controller);
 
-    _controller1 = AnimationController(vsync: this, duration: Duration(seconds: 3));
+    _controller1 = AnimationController(vsync: this, duration: Duration(milliseconds: 600));
     positionAnimate = Tween(begin: 0.0, end: 550.0).animate(CurvedAnimation(
       parent: _controller1,
       curve: Interval(0, 0.2),
